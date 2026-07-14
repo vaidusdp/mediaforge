@@ -6,6 +6,12 @@ It was designed to help content creators compress large videos on the fly and cr
 
 ---
 
+## 🔗 Live Application
+
+Check out the live deployment here: **[media-forge-x.vercel.app](https://media-forge-x.vercel.app/)**
+
+---
+
 ## 📸 Project Screenshots
 
 ### 1. Dashboard
