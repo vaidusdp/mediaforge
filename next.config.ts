@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    middlewareClientMaxBodySize: 70 * 1024 * 1024,
+  },
   reactCompiler: true,
 };
 

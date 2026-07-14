@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
 import { auth } from "@clerk/nextjs/server"
-import { error } from 'node:console';
 
 cloudinary.config({ 
     cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,  
