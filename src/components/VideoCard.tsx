@@ -50,7 +50,10 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, onDownload }) => {
     });
   }, []);
 
-  const formatSize = (size: number) => filesize(size);
+  const formatSize = (size: any) => {
+    const num = Number(size);
+    return isNaN(num) ? "N/A" : filesize(num);
+  };
 
   const formatDuration = (seconds: number) => {
     const m = Math.floor(seconds / 60);
@@ -58,9 +61,12 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, onDownload }) => {
     return `${m}:${s.toString().padStart(2, "0")}`;
   };
 
-  const compressVideoPercentage = Math.round(
-    (1 - Number(video.compressedSize) / Number(video.orignalSize)) * 100
-  );
+  const originalSizeNum = Number(video.orignalSize) || 0;
+  const compressedSizeNum = Number(video.compressedSize) || 0;
+
+  const compressVideoPercentage = originalSizeNum > 0
+    ? Math.round((1 - compressedSizeNum / originalSizeNum) * 100)
+    : 0;
 
   useEffect(() => {
     if (!isHovered) return;
