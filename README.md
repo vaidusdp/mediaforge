@@ -15,7 +15,7 @@ Check out the live deployment here: **[media-forge-x.vercel.app](https://media-f
 ## 📸 Project Screenshots
 
 ### 1. Dashboard
-![Dashboard](./public/dashboard.png)
+![Dashboard](./public/Dashboard.png)
 
 ### 2. Video Upload & Compression
 ![Upload Video](./public/upload-video.png)
